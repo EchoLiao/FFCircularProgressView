@@ -47,6 +47,8 @@
  */
 @property (readwrite) BOOL hideProgressIcons;
 
+@property (readwrite) BOOL drawStopIcon;
+
 /**
  * Make the background layer to spin around its center. This should be called in the main thread.
  */
