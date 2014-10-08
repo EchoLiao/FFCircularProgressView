@@ -124,10 +124,13 @@
     if ([self progress] == 1.0) {
         [self drawTick];
     } else if (([self progress] > 0) && [self progress] < 1.0) {
-        
-        if (!_hideProgressIcons && _drawStopIcon)
-            [self drawStop];
-        
+        if (!_hideProgressIcons) {
+            if (_drawStopIcon) {
+                [self drawStop];
+            } else {
+                [self drawArrow];
+            }
+        }
     } else {
         if (!self.iconView && !self.iconPath)
         {
