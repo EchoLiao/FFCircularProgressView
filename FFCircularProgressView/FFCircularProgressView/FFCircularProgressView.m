@@ -269,9 +269,7 @@
         
         if (_progress == 1.0) {
             [self animateProgressBackgroundLayerFillColor];
-        }
-        
-        if (_progress == 0.0) {
+        } else {
             _progressBackgroundLayer.fillColor = self.backgroundColor.CGColor;
         }
         
